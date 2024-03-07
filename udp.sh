@@ -9,7 +9,7 @@ echo -e "Downloading UDP Service"
 wget https://github.com/zahidbd2/udp-zivpn/releases/download/udp-zivpn_1.4.9/udp-zivpn-linux-amd64 -O /usr/local/bin/udp 1> /dev/null 2> /dev/null
 chmod +x /usr/local/bin/udp
 mkdir /etc/udp 1> /dev/null 2> /dev/null
-wget http://mattph.me/udp/config.json -O /etc/udp/config.json 1> /dev/null 2> /dev/null
+wget https://raw.githubusercontent.com/Eskanor666/installer/main/config.json -O /etc/udp/config.json 1> /dev/null 2> /dev/null
 
 echo "Generating cert files:"
 openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 -subj "/C=US/ST=California/L=Los Angeles/O=Example Corp/OU=IT Department/CN=udp" -keyout "/etc/udp/udp.key" -out "/etc/udp/udp.crt"
